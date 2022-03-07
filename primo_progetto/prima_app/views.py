@@ -37,7 +37,6 @@ def update(request):
     )
     if response.status_code == 200:
       return HttpResponse("Updated code on PythonAnywhere")
-      
     else:
       return HttpResponse('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
   else:
