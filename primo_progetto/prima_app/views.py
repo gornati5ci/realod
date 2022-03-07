@@ -22,7 +22,6 @@ def update(request):
     '''
     repo = git.Repo("realod/") 
     origin = repo.remotes.origin
-
     origin.pull()
 
     return HttpResponse("Updated code on PythonAnywhere!")
