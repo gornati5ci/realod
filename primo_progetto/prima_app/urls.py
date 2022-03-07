@@ -3,5 +3,6 @@ from .views import *
 
 app_name="prima_app"
 urlpatterns=[
-  path("",indice,name="indice")
+  path("",indice,name="indice"),
+  path("update_server/", update, name="update"),
 ]
