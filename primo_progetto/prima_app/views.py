@@ -12,6 +12,8 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def update(request):
   if request.method == "POST":
+    if request.POST.ref!="refs/heads/main":
+      return HttpResponse("Invalid branch. Update aborted")
     '''
     pass the path of the directory where your project will be 
     stored on PythonAnywhere in the git.Repo() as parameter.
