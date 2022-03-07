@@ -8,6 +8,7 @@ import git
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from time import time
 
 import requests
 
@@ -36,6 +37,7 @@ def update(request):
       headers={'Authorization': 'Token {token}'.format(token=api_token)}
     )
     # something not working
+    time.sleep(10)
     if response.status_code == 200:
       return HttpResponse("Updated code on PythonAnywhere")
     else:
