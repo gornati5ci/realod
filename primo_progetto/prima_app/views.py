@@ -12,6 +12,7 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def update(request):
   if request.method == "POST":
+    print(request.POST)
     if request.POST.ref!="refs/heads/main":
       return HttpResponse("Invalid branch. Update aborted")
     '''
