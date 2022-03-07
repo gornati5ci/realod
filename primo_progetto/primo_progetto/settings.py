@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^59+3xln$7jgnyec8_h@a!iec_+ptm7ofn^b)c)*z^9ciz%6!#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["commentatore.pythonanywhere.com","localhost"]
 
 
 # Application definition
